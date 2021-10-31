@@ -11,4 +11,4 @@ For those whose desire for answers has reached its fever pitch, the Entire Meal 
 
 
  [Repository](git@github.com:KATIETOLER/whats-for-dinner.git)
- [Website Address] (https://katietoler.github.io/whats-for-dinner/)
+ [Website Address](https://katietoler.github.io/whats-for-dinner/)
