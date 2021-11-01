@@ -119,10 +119,6 @@ button{
   position: relative;
 }
 
-.hidden{
-  display: none;
-}
-
 .you-should-make{
   text-align: center;
   vertical-align: middle;
@@ -136,25 +132,45 @@ button{
   font-weight: bold;
   vertical-align: middle;
   font-size: 40px;
+  animation: fadeIn ease 10s;
+  -webkit-animation: fadeIn ease 10s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 .combo{
-  font-size: 30px;
+  font-size: 20px;
   position: relative;
-  bottom: 20%;
+  bottom: 30%;
   font-weight: bold;
   text-align: center;
   vertical-align: sub;
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 40px;
+  animation: fadeIn ease 10s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 .red-star{
   color: #ee5253;
 }
 
-
-/* .loader{
+.loader{
   position: relative;
   margin-left: 30%;
   border: 20px solid #f3f3f3;
@@ -164,31 +180,15 @@ button{
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation: spin 2s linear infinite;
 }
 
 @keyframes spin{
   0% { transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
-} */
-/* #clear-button{
-  position: relative;
-  padding: 5%;
-  font-size: 20px;
-  border-radius: 6px;
-  margin:0;
-  background-color: #95a5a6;
-  border-color: #95a5a6;
-  color: white;
-  width: 85px;
-  transition-duration: 0.7s;
-  border-style: solid;
 }
 
-#clear-button:hover{
-  color: black;
-  border-style: hidden;
-  background-color: white; opacity: 40%;
-  transform: translateY(-3)
-} */
+.hidden{
+  display: none;
+}
