@@ -11,26 +11,32 @@ var inputEntireMeal = document.getElementById('entire-meal')
 var form = document.querySelector("form");
 var log = document.getElementById("log");
 var savedRecipies = [];
-var result = document.querySelector('.result')
-var returnMsg = document.querySelector('.return-msg')
-var shouldMake = document.querySelector('.you-should-make')
-var combo = document.querySelector('.combo')
-var loader = document.querySelector('.load')
+var result = document.querySelector('.result');
+var returnMsg = document.querySelector('.return-msg');
+var shouldMake = document.querySelector('.you-should-make');
+var combo = document.querySelector('.combo');
+var loader = document.getElementById('load');
 //event listeners
 
-letsCookButton.addEventListener('click', showRecipe)
+letsCookButton.addEventListener('click', removePotImage)
+
+console.log(loader)
 
 function removePotImage() {
-  potImage.classList.add('hidden')
+  event.preventDefault();
+  potImage.classList.add('hidden');
+  shouldMake.classList.add('hidden');
+  returnMsg.classList.add('hidden');
+  loader.classList.remove('hidden');
+  setTimeout(function(){showRecipe()}, 1000);
   };
 
-
-
-function showRecipe(event) {
-  event.preventDefault();
-  removePotImage();
+function showRecipe() {
   clearMainDish();
   clearEntireMeal();
+  loader.classList.add('hidden');
+  shouldMake.classList.remove('hidden');
+  returnMsg.classList.remove('hidden');
     if(inputMainDish.checked) {
       return randomMain()
     }
@@ -47,15 +53,15 @@ function showRecipe(event) {
 
 function clearMainDish() {
   returnMsg.innerText = ''
-}
+};
 
 function clearEntireMeal() {
   combo.innerText = ''
-}
+};
 
 function showMsg() {
   shouldMake.classList.remove('hidden')
-}
+};
 
 function removeResultsMsg() {
   result.classList.add('hidden')
